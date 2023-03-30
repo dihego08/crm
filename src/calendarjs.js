@@ -4416,7 +4416,7 @@ function calendarJs( elementOrId, options, searchOptions, startDateTime ) {
                         url: url,
                         repeatEveryCustomValue: repeatEveryCustomValue
                     };
-
+                    agregar_evento(isExistingEvent, newEvent);
                 if ( _element_EventEditorDialog_RepeatEvery_Never.checked ) {
                     newEvent.repeatEvery = _repeatType.never;
                 } else if ( _element_EventEditorDialog_RepeatEvery_EveryDay.checked ) {

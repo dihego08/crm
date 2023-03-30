@@ -14,6 +14,11 @@ function lista_eventos() {
             };
             calendarInstance.addEvent(event);
         });
-    }
-    );
+    });
+}
+function agregar_evento(nuevo, data) {
+    console.log(data);
+    /*$.post("index.php?parAccion=insertar_evento", data, function (response) {
+        var obj = JSON.parse(response);
+    });*/
 }
