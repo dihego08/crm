@@ -1,4 +1,4 @@
-/**
+ /**
  * Calendar.js
  * 
  * A drag & drop event calendar (for Javascript), that is fully responsive and compatible with all modern browsers.
@@ -1782,7 +1782,7 @@ function calendarJs( elementOrId, options, searchOptions, startDateTime ) {
                             event.className += " focused-event";
                         }
                     }
-    
+                    event.setAttribute('data-id' , eventDetails.id_db);
                     event.onmousemove = function( e ) {
                         if ( _element_Tooltip_EventDetails !== null && _element_Tooltip_EventDetails.id === eventDetails.id ) {
                             cancelBubble( e );
@@ -4358,6 +4358,7 @@ function calendarJs( elementOrId, options, searchOptions, startDateTime ) {
     }
 
     function eventDialogEvent_OK() {
+        console.log("AKI AÑADO UNO NUEVO EVENTO " + _element_EventEditorDialog_EventDetails.id);
         var fromTime = _element_EventEditorDialog_TimeFrom.value.split( ":" ),
             toTime = _element_EventEditorDialog_TimeTo.value.split( ":" ),
             title = trimString( _element_EventEditorDialog_Title.value ),
@@ -8517,91 +8518,91 @@ function calendarJs( elementOrId, options, searchOptions, startDateTime ) {
 
         if ( isInvalidOptionArray( _options.dayHeaderNames, 7 ) ) {
             _options.dayHeaderNames = [
-                "Mon",
-                "Tue",
-                "Wed",
-                "Thu",
-                "Fri",
-                "Sat",
-                "Sun"
+                "Lun",
+                "Mar",
+                "Mie",
+                "Jue",
+                "Vie",
+                "Sab",
+                "Dom"
             ];
         }
 
         if ( isInvalidOptionArray( _options.dayNames, 7 ) ) {
             _options.dayNames = [
-                "Monday",
-                "Tuesday",
-                "Wednesday",
-                "Thursday",
-                "Friday",
-                "Saturday",
-                "Sunday"
+                "Lunes",
+                "Martes",
+                "Miercoles",
+                "Jueves",
+                "Viernes",
+                "Sabado",
+                "Domingo"
             ];
         }
 
         if ( isInvalidOptionArray( _options.monthNames, 12 ) ) {
             _options.monthNames = [
-                "January",
-                "February",
-                "March",
-                "April",
-                "May",
-                "June",
-                "July",
-                "August",
-                "September",
-                "October",
-                "November",
-                "December"
+                "Enero",
+                "Febrero",
+                "Marzo",
+                "Abril",
+                "Mayo",
+                "Junio",
+                "Julio",
+                "Agosto",
+                "Septiembre",
+                "Octubre",
+                "Noviembre",
+                "Diciembre"
             ];
         }
 
         if ( !isDefinedString( _options.fromText ) ) {
-            _options.fromText = "From:";
+            _options.fromText = "Desde:";
         }
 
         if ( !isDefinedString( _options.toText ) ) {
-            _options.toText = "To:";
+            _options.toText = "Hasta:";
         }
 
         if ( !isDefinedString( _options.isAllDayText ) ) {
-            _options.isAllDayText = "Is All-Day";
+            _options.isAllDayText = "Todo el Día";
         }
 
         if ( !isDefinedString( _options.titleText ) ) {
-            _options.titleText = "Title:";
+            _options.titleText = "Título:";
         }
 
         if ( !isDefinedString( _options.descriptionText ) ) {
-            _options.descriptionText = "Description:";
+            _options.descriptionText = "Descripción:";
         }
 
         if ( !isDefinedString( _options.locationText ) ) {
-            _options.locationText = "Location:";
+            _options.locationText = "Ubicación:";
         }
 
         if ( !isDefinedString( _options.addText ) ) {
-            _options.addText = "Add";
+            _options.addText = "Añadir";
         }
 
         if ( !isDefinedString( _options.updateText ) ) {
-            _options.updateText = "Update";
+            _options.updateText = "Actualizar";
         }
 
         if ( !isDefinedString( _options.cancelText ) ) {
-            _options.cancelText = "Cancel";
+            _options.cancelText = "Cancelar";
         }
 
         if ( !isDefinedString( _options.removeEventText ) ) {
-            _options.removeEventText = "Remove";
+            _options.removeEventText = "Eliminar";
         }
 
         if ( !isDefinedString( _options.addEventTitle ) ) {
-            _options.addEventTitle = "Add Event";
+            _options.addEventTitle = "Añadir Evento";
         }
 
         if ( !isDefinedString( _options.editEventTitle ) ) {
-            _options.editEventTitle = "Edit Event";
+            _options.editEventTitle = "Editar Evento";
         }
 
         if ( !isDefinedString( _options.exportStartFilename ) ) {
@@ -8649,11 +8650,11 @@ function calendarJs( elementOrId, options, searchOptions, startDateTime ) {
         }
 
         if ( !isDefinedString( _options.allDayText ) ) {
-            _options.allDayText = "All-Day";
+            _options.allDayText = "Todo el Día";
         }
 
         if ( !isDefinedString( _options.allEventsText ) ) {
-            _options.allEventsText = "All Events";
+            _options.allEventsText = "Todos los Eventos";
         }
 
         if ( !isDefinedString( _options.toTimeText ) ) {
